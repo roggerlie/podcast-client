@@ -1,12 +1,26 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import PodcastApp from './pages/PodcastApp';
+import PodcastDetail from "./pages/PodcastDetail";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+
+const RootApp = () => (
+    <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+                <Route exact path="/" component={PodcastApp}/>
+                <Route exact path="/:id" component={PodcastDetail}/>
+            </Switch>
+        </Suspense>
+    </BrowserRouter>
+)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RootApp />
   </React.StrictMode>,
   document.getElementById('root')
 );

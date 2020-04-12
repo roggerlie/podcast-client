@@ -1,13 +1,93 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #eee;
+  margin: auto;
+  font-family: "Avenir", "Arial", sans-serif;
+  max-width: 500px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header .logo {
+  width: 100px;
+}
+
+.form-search {
+  width: 100%;
+}
+
+.form-search input {
+  width: 100%;
+}
+
+ul.podcast-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.podcast-list li {
+  display: flex;
+  padding: 5px;
+  border: 3px #aaa solid;
+  margin-top: 5px;
+}
+
+ul.podcast-list li .thumbnail {
+  width: 150px;
+  max-width: 40%;
+}
+
+ul.podcast-list li .info {
+  padding: 5px;
+  max-width: 60%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+ul.podcast-list li .info h3 {
+  margin: 0;
+}
+
+ul.podcast-list li .info a.detail {
+  padding: 2px;
+  text-decoration: none;
+  color: #333;
+  border: #333 solid 1px;
+}
+
+ul.podcast-list li .info a.link {
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
+}
+
+.detail-podcast {
+  display: flex;
+  border: 3px #aaa solid;
+}
+
+.detail-podcast .thumbnail {
+  max-width: 45%;
+}
+
+.detail-podcast .thumbnail img {
+  max-width: 100%;
+}
+
+.detail-podcast .info {
+  padding: 0 10px;
+  max-width: 50%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.detail-podcast .info h3 {
+  margin: 0;
+}
+
+.detail-podcast .info audio {
+  max-width: 100%;
+}
+
+.detail-podcast .info a.link {
+  font-size: 0.75em;
+  text-decoration: none;
+  color: #333;
 }
